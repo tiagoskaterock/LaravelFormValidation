@@ -58,7 +58,7 @@
 
 	  	
 
-	  
+	  {{--
 	  @if(count($errors) > 0)
 
 		  <div class="mt-3">
@@ -76,6 +76,7 @@
 		  </div>
 
 	  @endif
+	  --}}
 
 	</form>
 			
