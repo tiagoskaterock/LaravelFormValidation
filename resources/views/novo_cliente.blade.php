@@ -6,7 +6,7 @@
 
 	<a href="{{ route('inicio') }}" class="btn btn-primary mb-3">Voltar</a>
   
-	<form method="post" action="#">
+	<form method="post" action="{{ route('armazena_novo_cliente') }}">
 
 		@csrf
 
