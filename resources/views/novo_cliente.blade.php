@@ -3,9 +3,12 @@
 @include('includes.header')
   
 <main role="main" class="container mt-5">
+
+	<a href="{{ route('inicio') }}" class="btn btn-primary mb-3">Voltar</a>
   
 	<form method="post" action="#">
 
+		@csrf
 
 
 		<div class="form-group">
@@ -34,7 +37,7 @@
 
 
 	  <button type="submit" class="btn btn-primary">Enviar</button>
-	  
+
 	</form>
 			
 

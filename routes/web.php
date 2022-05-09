@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('clientes');
-})->name('inicio');
+Route::get('/', 'ClienteControlador@index')->name('inicio');
 
-Route::get('/novo_cliente', function () {
-    return view('novo_cliente');
-})->name('novo_cliente');
+Route::get('/novo_cliente', 'ClienteControlador@create')->name('novo_cliente');
