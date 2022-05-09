@@ -13,7 +13,7 @@
 
 		<div class="form-group">
 	    <label for="nome">Nome</label>
-	    <input type="text" class="form-control" id="nome" name="nome" aria-describedby="nome" placeholder="Nome completo">
+	    <input type="text" class="form-control" id="nome" name="nome" aria-describedby="nome" placeholder="Nome completo" value="{{ old('nome') }}">
 	  </div>
 
 
@@ -21,7 +21,7 @@
 
 	  <div class="form-group">
 	    <label for="email">Email</label>
-	    <input type="text" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Seu melhor email">
+	    <input type="text" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Seu melhor email" value="{{ old('email') }}">
 	  </div>
 
 
@@ -31,7 +31,7 @@
 
 	  <div class="form-group">
 	    <label for="endereco">Endereço</label>
-	    <input type="text" class="form-control" id="endereco" name="endereco" aria-describedby="Endereço" placeholder="Endereço, rua, número, bairro, apto...">
+	    <input type="text" class="form-control" id="endereco" name="endereco" aria-describedby="Endereço" placeholder="Endereço, rua, número, bairro, apto..." value="{{ old('endereco') }}">
 	  </div>
 
 
@@ -39,19 +39,25 @@
 	  <button type="submit" class="btn btn-primary">Enviar</button>
 
 
+	  	
 
+	  
 	  @if(count($errors) > 0)
 
-	  	@foreach($errors->all() as $error)
-		  	<div class="alert alert-warning alert-dismissible fade show" role="alert">
-				  <strong>{{ $errors }}</strong>
-				  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				    <span aria-hidden="true">&times;</span>
-				  </button>
-				</div>
+		  <div class="mt-3">
 
-	  	@endforeach
-	  	
+		  	@foreach($errors->all() as $error)
+			  	<div class="alert alert-warning alert-dismissible fade show" role="alert">
+					  <strong>{{ $error }}</strong>
+					  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					    <span aria-hidden="true">&times;</span>
+					  </button>
+					</div>
+
+		  	@endforeach
+
+		  </div>
+
 	  @endif
 
 	</form>
