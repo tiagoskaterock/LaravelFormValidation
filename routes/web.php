@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('clientes');
+})->name('inicio');
+
+Route::get('/novo_cliente', function () {
+    return view('novo_cliente');
+})->name('novo_cliente');
